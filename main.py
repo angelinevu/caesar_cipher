@@ -14,17 +14,17 @@ def main():
             encryption = encrypt(text, key)
             print(f'\nEncryption: {encryption}')
         
-        if option == 2:     #Decryption
+        elif option == 2:     #Decryption
             text = input('\nEnter Cipher Text: ')
             key = int(input('Enter a key value (1-26): '))
             decryption = decrypt(text, key)
             print(f'\nDecryption: {decryption}')
             
-        if option == 3:     #Quit
+        elif option == 3:     #Quit
             repeat = False
             print('Program Exited')
             
-        if option == 99:    #Special feature
+        else:                 #Option 99
             print('\nCommence Brute Force Attack')
             text = input('\nEnter Cipher Text: ')
             results = brute_force(text)
